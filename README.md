@@ -2,6 +2,8 @@
 
 Docker image which bundles cloud automation software used for operating kubernetes. Apart from that the container bundles lots of useful tools to provide you a ready-to-go container workstation without need to install anything on your host machine.
 
+**Note**: This image requires uid/gid in the container match the user installing the container. This means that macOS and Windows docker daemons will likely have problems since they run in hidden VMs and so the uid/gid of the user comes from the VM, not macOS or Windows. Stick to Linux to avoid these troubles or install tools with this knowledge -- either install natively or by modifying this container or creating your own.
+
 ## Tools
 
 List of software bundled into this container:
